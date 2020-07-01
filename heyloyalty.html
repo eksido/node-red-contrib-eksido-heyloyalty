@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('heyloyalty',{
+        category: 'config',
+        color: '#ffffff',
+        defaults: {
+            apikey: {value:""},
+            apisecret: {value:""}
+        },
+        label: function() { 
+            return this.name || "HeyLoyalty"; 
+        }, 
+        credentials: {
+            apikey: {type:"text"},
+            apisecret: {type:"password"}
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="heyloyalty">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="icon-tag"></i>name</label>
+        <input type="text" id="node-config-input-name" placeholder="name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-accountid"><i class="icon-tag"></i>apikey</label>
+        <input type="text" id="node-config-input-accountid">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-apikey"><i class="icon-tag"></i> apisecret</label>
+        <input type="password" id="node-config-input-apikey">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="heyloyalty">
+Help text for usage
+</script>
